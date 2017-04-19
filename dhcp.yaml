@@ -1,0 +1,44 @@
+document: modulemd
+version: 1
+data:
+    name: dhcp
+    summary: Provides the ISC DHCP client daemon and dhclient-script
+    description: >
+            DHCP (Dynamic Host Configuration Protocol) is a protocol which allows
+            individual devices on an IP network to get their own network
+            configuration information (IP address, subnetmask, broadcast address,
+            etc.) from a DHCP server. The overall purpose of DHCP is to make it
+            easier to administer a large network.
+
+            This package provides the ISC DHCP client.
+
+    license:
+        module:
+            - MIT
+        content: 
+            - ISC
+    dependencies:
+        buildrequires:
+            base-runtime: master
+            perl: master
+        requires:
+            base-runtime: master
+    references:
+        community: https://fedoraproject.org/wiki/Modularity
+    profiles:
+        default:
+            rpms:
+                - dhcp
+    api:
+        rpms:
+            - dhcp
+    components:
+        rpms:
+            dhcp:
+                rationale: Provides API for this module.
+                ref: f26
+                buildorder: 10
+            bind99:
+                rationale: build dependency.
+                ref: f26
+
