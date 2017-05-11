@@ -19,18 +19,26 @@ data:
             - ISC
     dependencies:
         buildrequires:
-            base-runtime: master
-            perl: master
+            base-runtime: f26
+            common-build-dependencies: f26
+            shared-userspace: f26
         requires:
-            base-runtime: master
+            base-runtime: f26
+            shared-userspace: f26
     references:
         community: https://fedoraproject.org/wiki/Modularity
+        documentation: https://github.com/container-images/dhcp
+        tracker: https://github.com/container-images/dhcp
     profiles:
         default:
             rpms:
-                - dhcp
+                - dhcp-client
+                - dhcp-common
+                - dhcp-libs
     api:
         rpms:
+            - dhcp-client
+            - dhcp-common
             - dhcp
     components:
         rpms:
@@ -39,6 +47,21 @@ data:
                 ref: f26
                 buildorder: 10
             bind99:
-                rationale: build dependency.
+                rationale: requirement for dhcp.
+                ref: f26
+            generic-release:
+                rationale: requirement for dhcp.
+                ref: f26
+            ipcalc:
+                rationale: requirement for dhcp.
+                ref: f26
+            iproute:
+                rationale: requirement for dhcp.
+                ref: f26
+            iputils:
+                rationale: requirement for dhcp.
+                ref: f26
+            libmnl:
+                rationale: requirement for dhcp.
                 ref: f26
 
