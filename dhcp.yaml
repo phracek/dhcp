@@ -22,6 +22,7 @@ data:
             base-runtime: f26
             common-build-dependencies: f26
             shared-userspace: f26
+            perl: f26
         requires:
             base-runtime: f26
             shared-userspace: f26
