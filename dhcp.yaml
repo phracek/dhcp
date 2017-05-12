@@ -36,11 +36,17 @@ data:
                 - dhcp-client
                 - dhcp-common
                 - dhcp-libs
+                - ipcalc
+                - iproute
+                - iputils
     api:
         rpms:
             - dhcp-client
             - dhcp-common
             - dhcp
+            - ipcalc
+            - iproute
+            - iputils
     components:
         rpms:
             dhcp:
@@ -56,13 +62,33 @@ data:
             ipcalc:
                 rationale: requirement for dhcp.
                 ref: f26
+                buildorder: 5
+            libnetfilter_conntrack:
+                rationale: requirement for iproute.
+                ref: f26
+                buildorder: 2
+            libnfnetlink:
+                rationale: requirement for iproute.
+                ref: f26
+                buildorder: 1
             iproute:
                 rationale: requirement for dhcp.
                 ref: f26
+                buildorder: 3
             iputils:
                 rationale: requirement for dhcp.
                 ref: f26
+                buildorder: 4
             libmnl:
                 rationale: requirement for dhcp.
                 ref: f26
-
+            perl-SGMLSpm:
+                rationale: requirement for dhcp.
+                ref: f26
+                buildorder: 2
+            GeoIP-GeoLite-data:
+                rationale: requirement for GeoIP.
+                ref: f26
+            GeoIP:
+                rationale: requirement for ipcalc.
+                ref: f26
