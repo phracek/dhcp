@@ -56,9 +56,6 @@ data:
             bind99:
                 rationale: requirement for dhcp.
                 ref: f26
-            generic-release:
-                rationale: requirement for dhcp.
-                ref: f26
             ipcalc:
                 rationale: requirement for dhcp.
                 ref: f26
