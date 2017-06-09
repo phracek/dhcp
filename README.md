@@ -22,7 +22,7 @@ This module provides the ISC DHCP client.
 | ✓ YES | **No bootstrap** - uses only proper modules |
 | ✗ NO | General **tests are in dist-git** |
 | ✗ NO | General **tests pass** |
-| ? | Meets the **Fedora Module Packaging Guidelines** |
+| ✓ YES | Meets the **Fedora Module Packaging Guidelines** |
 <!--
 | ✓ YES | yes! |
 | ✗ NO  | no! |
