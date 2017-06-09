@@ -18,7 +18,7 @@ This module provides the ISC DHCP client.
 | State | Description |
 |-------|-------------|
 | ✓ YES | **Build passes** in the infra (all build deps are ok) |
-| ? | **Installs** on the Base Runtime (all runtime deps are ok) |
+| ✓ YES | **Installs** on the Base Runtime (all runtime deps are ok) |
 | ✓ YES | **No bootstrap** - uses only proper modules |
 | ✗ NO | General **tests are in dist-git** |
 | ✗ NO | General **tests pass** |
