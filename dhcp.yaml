@@ -47,6 +47,9 @@ data:
             - ipcalc
             - iproute
             - iputils
+    filter:
+        rpms:
+            - perl-SGMLpm
     components:
         rpms:
             dhcp:
